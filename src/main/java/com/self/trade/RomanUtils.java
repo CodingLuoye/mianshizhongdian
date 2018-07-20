@@ -11,6 +11,11 @@ public class RomanUtils {
 		return symbols.matches(romanNumberValidator);
 	}
 	
+	/**
+	 * 根据symbols获取对应的值
+	 * @param symbols
+	 * @return
+	 */
 	public int getSymbolsValue(String symbols){
 		int sum = 0;
 		int previousNumber = 0;

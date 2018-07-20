@@ -42,11 +42,11 @@ public class Run {
 	}
 
 	public static void main(String[] args) {
-		/*for (int i = 122345; i < 543221; i++) {
+		for (int i = 122345; i < 543221; i++) {
 			if (isValidNumber(String.valueOf(i))) {
 				System.out.println(i);
 			}
-		}*/
+		}
 		int a = 4;
 		System.out.println(Integer.toBinaryString(a));
 		System.out.println(Integer.toHexString(a));
