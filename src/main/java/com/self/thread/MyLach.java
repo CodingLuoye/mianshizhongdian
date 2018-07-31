@@ -1,5 +1,7 @@
 package com.self.thread;
 
+import java.util.concurrent.atomic.AtomicInteger;
+
 /**
  * 协作
  * @author JackChen
@@ -49,5 +51,18 @@ public class MyLach {
 		}
 		latch.await();
 		System.out.println("collect worker result");
+	}
+}
+
+//使用AtomicInteger实现锁MyLock
+class Mylock2{
+	private AtomicInteger status = new AtomicInteger(0);
+	public void lock(){
+		while(!status.compareAndSet(0, 1)){
+			Thread.yield();
+		}
+	}
+	public void unLock(){
+		status.compareAndSet(1, 0);
 	}
 }
