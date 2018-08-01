@@ -1,0 +1,10 @@
+package com.self.reflect;
+
+public class CGLibContainerDemo {
+	public static void main(String[] args) {
+		ServiceA a = CGLibContainer.getInstance(ServiceA.class);
+		a.callB();
+	}
+}
+
+

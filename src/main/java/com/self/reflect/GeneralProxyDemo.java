@@ -37,6 +37,7 @@ public class GeneralProxyDemo {
 			return result;
 		}
 	}
+	@SuppressWarnings("unchecked")
 	private static <T>T getProxy(Class<T> intf,T realObj){
 		return (T)Proxy.newProxyInstance(intf.getClassLoader(), new Class<?>[]{intf}, new SimpleInvocationHandler(realObj));
 	}

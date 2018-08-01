@@ -24,6 +24,7 @@ public class SimpleCGLibDemo {
 			return result;
 		}
 	}
+	@SuppressWarnings("unchecked")
 	private static<T> T getProxy(Class<T> cls){
 		Enhancer enhancer = new Enhancer();
 		enhancer.setSuperclass(cls);
