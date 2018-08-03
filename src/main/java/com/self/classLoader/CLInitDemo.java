@@ -11,8 +11,9 @@ public class CLInitDemo {
 		ClassLoader cl = ClassLoader.getSystemClassLoader();
 		String className = CLInitDemo.class.getName() + "$Hello";
 		try {
-//			Class<?> cls = cl.loadClass(className);
-			Class<?> cls = Class.forName(className);
+			Class<?> cls = cl.loadClass(className);
+			Class<?> cls2 = Class.forName(className);
+			System.out.println(cls.getName() + cls2.getName());
 		} catch (ClassNotFoundException e) {
 			e.printStackTrace();
 		}
