@@ -3,7 +3,12 @@ package com.self.blockingQueue;
 import java.util.LinkedList;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
-
+/**
+ * ReentrantLock操作是先调用lock(),操作完成后调用unlock()
+ * Condition ReentrantLock.newCondition() 调用await(),调用singalAll()唤醒
+ * @author Administrator
+ *
+ */
 public class MyQueue {
 	private LinkedList<String> linkedList = new LinkedList<String>();
 	private ReentrantLock lock = new ReentrantLock();

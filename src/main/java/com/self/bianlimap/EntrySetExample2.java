@@ -39,24 +39,26 @@ public class EntrySetExample2 {
 			new Worker("李四",EnumSet.of(Day.TUESDAY,Day.THRUSDAY,Day.SATURDAY)),
 			new Worker("王五",EnumSet.of(Day.TUESDAY,Day.THRUSDAY))
 		};
-		Set<Day> days = EnumSet.allOf(Day.class);
+		//allOf为Day的所有值
+		Set<Day> days = EnumSet.allOf(Day.class); 
 		for (Worker w : workers) {
-			days.removeAll(w.getAvailableDays());
+			days.removeAll(w.getAvailableDays());//移除工人工作时间
 		}
 		System.out.println(days);
-		
+		//有哪些天至少有一个人来
 		Set<Day> dayss = EnumSet.noneOf(Day.class);
 		for (Worker w : workers) {
 			dayss.addAll(w.getAvailableDays());
 		}
 		System.out.println(dayss);
 		
+		//有哪些天所有人都会来
 		Set<Day> daysss = EnumSet.allOf(Day.class);
 		for (Worker w : workers) {
 			daysss.retainAll(w.getAvailableDays());
 		}
 		System.out.println(daysss);
-		
+		//哪些人星期一和星期二都会来，containsALL
 		Set<Worker> availableWorkers = new HashSet<Worker>();
 		for (Worker w : workers) {
 			if(w.getAvailableDays().containsAll(EnumSet.of(Day.MONDAY,Day.TUESDAY))){
@@ -67,7 +69,7 @@ public class EntrySetExample2 {
 			System.out.println(w.getName());
 		}
 		
-		//哪些天至少会有两个人来
+		//哪些天至少会有两个人来,使用EnumMap统计每天人数,找出至少有两个人的天
 		Map<Day,Integer> countMap = new EnumMap<>(Day.class);
 		for(Worker w:workers){
 			for(Day d:w.getAvailableDays()){

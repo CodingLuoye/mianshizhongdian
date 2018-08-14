@@ -1,5 +1,10 @@
 package com.self.reflect;
 
+/**
+ * 静态代理的实现
+ * @author Administrator
+ *
+ */
 public class SimpleStaticProxyDemo {
 
 	static interface IService{
@@ -11,6 +16,7 @@ public class SimpleStaticProxyDemo {
 			System.out.println("hello");
 		}
 	}
+	/*代理类*/
 	static class TraceProxy implements IService{
 		private IService relaService;
 		public TraceProxy(IService relaService){

@@ -5,6 +5,12 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TreeMap;
 
+/**
+ * Comparable 只有 public int compareTo(T o);然排序的排序方法
+ * Comparable 可以自定义两个对象进行比较
+ * @author Administrator
+ *
+ */
 public class TreeMapExample {
 	
 	public static void main(String[] args) {

@@ -5,7 +5,11 @@ import java.lang.reflect.Method;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.MethodInterceptor;
 import net.sf.cglib.proxy.MethodProxy;
-
+/**
+ * 使用CGLib实现动态代理  实现MethodInterceptor 重写intercept方法
+ * @author Administrator
+ *
+ */
 public class SimpleCGLibDemo {
 
 	static class RealService{

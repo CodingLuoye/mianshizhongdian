@@ -1,7 +1,11 @@
 package com.self.countdownlatch;
 
 import java.util.concurrent.CountDownLatch;
-
+/**
+ * CountDownLatch 实现指定方法唤醒
+ * @author Administrator
+ *
+ */
 public class MyClass {
 	CountDownLatch countdownLatch = new CountDownLatch(2);
 

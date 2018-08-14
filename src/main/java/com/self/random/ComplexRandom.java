@@ -1,7 +1,11 @@
 package com.self.random;
 
 import java.util.Random;
-
+/**
+ * 生成一定规则的随机数,复杂密码
+ * @author Administrator
+ *
+ */
 public class ComplexRandom {
 	
 	private static final String SPECIAL_CHARS = "!@#$%^&*_=+-/"; 

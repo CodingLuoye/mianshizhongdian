@@ -2,6 +2,11 @@ package com.self.thread;
 
 import java.util.concurrent.Semaphore;
 
+/**
+ * 信号量Semaphore 配置许可
+ * @author Administrator
+ *
+ */
 public class AccessControlService {
 	
 	public static class ConcurrentLimitException extends RuntimeException{

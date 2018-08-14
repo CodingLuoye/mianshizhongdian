@@ -3,7 +3,6 @@ package com.self.countdownlatch;
 public class Run {
 	public static void main(String[] args) throws InterruptedException {
 		final MyClass myClass = new MyClass();
-
 		new Thread(new Runnable() {
 			public void run() {
 				try {

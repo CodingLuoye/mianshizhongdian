@@ -1,5 +1,10 @@
 package com.self.binarysearch;
 
+/**
+ * 二分查找
+ * @author Administrator
+ *
+ */
 public class BinarySearch {
 
 	public static int binarySearch(int[] arr, int dest) {

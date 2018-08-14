@@ -3,7 +3,11 @@ package com.self.reflect;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-
+/**
+ * JDK动态代理   实现InvocationHandler,重写inovke方法 
+ * @author Administrator
+ *
+ */
 public class SimpleJDKDynamicProxyDemo {
 	static interface IService{
 		public void sayHello();

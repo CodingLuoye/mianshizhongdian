@@ -1,5 +1,10 @@
 package com.self.classLoader;
 
+/**
+ * ClassLoader加载器demo
+ * @author Administrator
+ *
+ */
 public class ClassLoadDemo {
 	public static void main(String[] args) {
 		ClassLoader cl = ClassLoadDemo.class.getClassLoader();

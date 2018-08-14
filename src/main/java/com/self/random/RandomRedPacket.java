@@ -1,7 +1,11 @@
 package com.self.random;
 
 import java.util.Random;
-
+/**
+ *  简单的抢红包算法
+ * @author Administrator
+ *
+ */
 public class RandomRedPacket {
 
 	private int leftMoney;

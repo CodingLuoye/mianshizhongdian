@@ -10,6 +10,7 @@ public class EntrySetExample {
 	}
 	
 	public static void main(String[] args) {
+		//noneOf返回的set为空
 		Set<Day> weekend = EnumSet.noneOf(Day.class);
 		weekend.add(Day.SATURDAY);
 		weekend.add(Day.SUNDAY);

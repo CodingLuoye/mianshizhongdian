@@ -10,11 +10,17 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Supplier;
 
+/**
+ * CompletableFuture 可执行程序示例
+ * @author Administrator
+ *
+ */
 public class futureDemo {
 	public static void main(String[] args) {
 		Runnable taskA = ()->System.out.println("task A");
 		Runnable taskB = ()->System.out.println("task B");
 		Runnable taskC = ()->System.out.println("task C");
+		//异步顺序执行
 		CompletableFuture.runAsync(taskA).thenRun(taskB).thenRun(taskC);
 		
 		Supplier<String> taskAA = ()->"hello";
