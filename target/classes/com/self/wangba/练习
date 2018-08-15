@@ -1,3 +1,0 @@
-使用多线程编程，模拟一个网吧的营业过程
-
-涉及到的知识点：DelayQueue；放入DelayQueue中的bean必须实现java.util.concurrent.Delayed接口；

@@ -1,1 +1,0 @@
-使用CountDownLatch实现 wait、notify机制，使得唤醒一个线程需要的唤醒次数可以人为指定
