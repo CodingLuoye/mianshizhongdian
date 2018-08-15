@@ -24,6 +24,7 @@ class B extends A{
 	public B(){
 		System.out.println("this is b constructor");
 	}
+	@Override
 	public void show(){
 		System.out.println("this is B method");
 	}

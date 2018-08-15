@@ -42,6 +42,7 @@ public class Account {
 	
 	public static void main(String[] args) throws InterruptedException {
 		Thread t = new Thread(){
+			@Override
 			public void run(){
 				LockSupport.park();  //放弃cpu
 				System.out.println("exit");

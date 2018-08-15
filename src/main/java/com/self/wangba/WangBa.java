@@ -27,6 +27,7 @@ public class WangBa implements Runnable {
 		System.out.println("网名" + customer.getName() + " 身份证" + customer.getId() + "时间到下机...");
 	}
 
+	@Override
 	public void run() {
 		while (isYingYe) {
 			try {

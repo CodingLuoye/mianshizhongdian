@@ -10,6 +10,7 @@ public class Run {
 		for (int i = 0; i < ADD_THREAD_NUM; i++) {
 			final int index = i;
 			new Thread(new Runnable() {
+				@Override
 				public void run() {
 					try {
 						myQueue.add("" + index);
@@ -21,6 +22,7 @@ public class Run {
 		}
 		for (int i = 0; i < REMOVE_THREAD_NUM; i++) {
 			new Thread(new Runnable() {
+				@Override
 				public void run() {
 					try {
 						myQueue.removeFirst();

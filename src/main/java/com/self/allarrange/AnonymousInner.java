@@ -33,10 +33,12 @@ public class AnonymousInner {
 			{
 				System.out.println("匿名内部类的初始化模块");
 			}
+			@Override
 			public double getPrice() {
 				// TODO Auto-generated method stub
 				return 56.2;
 			}
+			@Override
 			public String getName(){
 				return "键盘";
 			}

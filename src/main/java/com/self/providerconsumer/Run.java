@@ -13,6 +13,7 @@ public class Run {
 		/* 打印A的线程有PRINT_A_NUM个 */
 		for (int i = 0; i < PRINT_A_NUM; i++) {
 			new Thread(new Runnable() {
+				@Override
 				public void run() {
 					try {
 						printService.printA();
@@ -25,6 +26,7 @@ public class Run {
 		/* 打印B的线程有PRINT_B_NUM个 */
 		for (int i = 0; i < PRINT_B_NUM; i++) {
 			new Thread(new Runnable() {
+				@Override
 				public void run() {
 					try {
 						printService.printB();
@@ -37,6 +39,7 @@ public class Run {
 		/* 打印C的线程有PRINT_C_NUM个 */
 		for (int i = 0; i < PRINT_C_NUM; i++) {
 			new Thread(new Runnable() {
+				@Override
 				public void run() {
 					try {
 						printService.printC();

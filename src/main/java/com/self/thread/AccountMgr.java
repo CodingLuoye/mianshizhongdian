@@ -38,6 +38,7 @@ public class AccountMgr {
 		Thread[] threads = new Thread[threadNum];
 		for (int i = 0; i < threadNum; i++) {
 			threads[i] = new Thread(){
+				@Override
 				public void run(){
 					int loopNum = 100;
 					for (int j = 0; j < loopNum; j++) {

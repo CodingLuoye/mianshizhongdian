@@ -41,6 +41,7 @@ public class Customer implements Delayed {
 	/** 
 	 * 返回 未过期时长
 	 */
+	@Override
 	public long getDelay(TimeUnit unit) {
 		return endTime - System.currentTimeMillis();// 截止时间 - 当前时间 = 未过期时长
 	}
@@ -48,6 +49,7 @@ public class Customer implements Delayed {
 	/** 
 	 * 相互比较排序用 
 	 */
+	@Override
 	public int compareTo(Delayed customer) {
 		return (int) (this.getDelay(null) - customer.getDelay(null));
 	}

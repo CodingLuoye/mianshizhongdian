@@ -4,6 +4,7 @@ public class Run {
 	public static void main(String[] args) throws InterruptedException {
 		final MyClass myClass = new MyClass();
 		new Thread(new Runnable() {
+			@Override
 			public void run() {
 				try {
 					myClass.method1();
@@ -16,12 +17,14 @@ public class Run {
 		Thread.sleep(2000);
 		
 		new Thread(new Runnable() {
+			@Override
 			public void run() {
 				myClass.method2();
 			}
 		}).start();
 
 		new Thread(new Runnable() {
+			@Override
 			public void run() {
 				myClass.method3();
 			}
