@@ -34,6 +34,7 @@ public class RandomRedPacket {
 		RandomRedPacket redPacket = new RandomRedPacket(10, 5);
 		for (int i = 0; i < 5; i++) {
 			Thread thread = new Thread(){
+				@Override
 				public void run(){
 					System.out.println("线程:"+Thread.currentThread().getName()+"抢到了"+redPacket.nextMoney()+"角钱");
 				}
