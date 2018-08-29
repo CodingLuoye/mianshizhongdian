@@ -6,6 +6,7 @@ public class Thread1 extends Thread {
 		super();
 		this.service = service;
 	}
+	@SuppressWarnings("static-access")
 	@Override
 	public void run() {
 		service.printA();

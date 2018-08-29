@@ -46,7 +46,9 @@ class MyThread2 extends Thread{
 }
 
 public class MyOneList {
+	@SuppressWarnings("rawtypes")
 	private List list = new ArrayList<>();
+	@SuppressWarnings("unchecked")
 	synchronized public void add(String data){
 		list.add(data);
 	}

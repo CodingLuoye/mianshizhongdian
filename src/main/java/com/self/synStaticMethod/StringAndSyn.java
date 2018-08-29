@@ -24,6 +24,7 @@ class StringThreadA extends Thread{
 		super();
 		this.service = service;
 	}
+	@SuppressWarnings("static-access")
 	@Override
 	public void run() {
 		service.print("AA");
@@ -35,6 +36,7 @@ class StringThreadB extends Thread{
 		super();
 		this.service = service;
 	}
+	@SuppressWarnings("static-access")
 	@Override
 	public void run() {
 		service.print("AA");

@@ -25,12 +25,14 @@ public class PublicStaticClass {
 	public String getUsername() {
 		return username;
 	}
+	@SuppressWarnings("static-access")
 	public void setUsername(String username) {
 		this.username = username;
 	}
 	public String getPassword() {
 		return password;
 	}
+	@SuppressWarnings("static-access")
 	public void setPassword(String password) {
 		this.password = password;
 	}
