@@ -3,6 +3,11 @@ package com.self.bianlimap;
 import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * CurrentHashMap 读写同步
+ * @author Administrator
+ *
+ */
 public class ConCurrentHashMapIteratorDemo {
 
 	public static void test(){
