@@ -23,7 +23,6 @@ public class MyService {
 		System.out.println(Thread.currentThread().getName() + "加了100之后的值是："+aiRef.addAndGet(100));
 		aiRef.addAndGet(1);
 	}
-	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		try {
 			MyService service = new MyService();

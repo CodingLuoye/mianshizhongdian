@@ -20,7 +20,12 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
-public class snakeGame extends JPanel {
+/**
+ * 网上找的贪吃蛇代码，学习swt编程用
+ * @author Administrator
+ *
+ */
+public class SnakeGame extends JPanel {
 	private static final long serialVersionUID = 1L;
 	// 常量，表示地图的宽和高
 	protected static final int HEIGHT = 30;
@@ -44,8 +49,8 @@ public class snakeGame extends JPanel {
 	private static int Difficult_Degree = 1;
 	private Scanner in;
 
-	public snakeGame(int Difficult_Degree){
-		snakeGame.Difficult_Degree = Difficult_Degree;
+	public SnakeGame(int Difficult_Degree){
+		SnakeGame.Difficult_Degree = Difficult_Degree;
 	}
 	
 	@Override
@@ -77,10 +82,10 @@ public class snakeGame extends JPanel {
 			g.fill3DRect(food.x * CELL_W, food.y * CELL_H, 20, 20, true);
 			
 			if(snake.size()==20){
-				snakeGame.GameOver = true;
+				SnakeGame.GameOver = true;
 			}
 
-			if (snakeGame.GameOver) {
+			if (SnakeGame.GameOver) {
 				g.setColor(Color.ORANGE);
 				g.setFont(new Font("宋体", Font.BOLD, 30));
 				if(snake.size()==20){
@@ -239,7 +244,7 @@ public class snakeGame extends JPanel {
 	}
 
 	public static void main(String[] args) throws InterruptedException {
-		snakeGame snakeGameOne = new snakeGame(10);
+		SnakeGame snakeGameOne = new SnakeGame(10);
 		JFrame frame1 = new JFrame("贪吃蛇变态版");
 		JMenuBar menuBar = new JMenuBar();
 		frame1.setJMenuBar(menuBar);
@@ -251,7 +256,7 @@ public class snakeGame extends JPanel {
         itemOpen1.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				snakeGame.GameOver = true;
+				SnakeGame.GameOver = true;
 			}
 		});
         JMenuItem itemOpen2 = new JMenuItem("重试");
@@ -341,7 +346,7 @@ public class snakeGame extends JPanel {
 				snakeGameOne.IsOver();
 				snakeGameOne.reFresh();
 				snakeGameOne.repaint();
-				if (snakeGame.GameOver) {
+				if (SnakeGame.GameOver) {
 					snakeGameOne.repaint();
 				}
 				IsAuto = false;

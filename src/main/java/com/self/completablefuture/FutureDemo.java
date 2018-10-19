@@ -15,7 +15,7 @@ import java.util.function.Supplier;
  * @author Administrator
  *
  */
-public class futureDemo {
+public class FutureDemo {
 	public static void main(String[] args) {
 		Runnable taskA = ()->System.out.println("task A");
 		Runnable taskB = ()->System.out.println("task B");

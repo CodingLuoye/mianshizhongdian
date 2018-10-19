@@ -38,6 +38,7 @@ public class SequenceList<T> {
 	}
 	
 	//获取顺序表中索引为i处的元素，i表示索引，即以0开始
+	@SuppressWarnings("unchecked")
 	public T get(int i){
 		if(i<0 || i > size -1){
 			throw new IndexOutOfBoundsException("顺序表索引越界");
@@ -85,6 +86,7 @@ public class SequenceList<T> {
 	}
 	
 	//删除顺序表中指定索引处的元素
+	@SuppressWarnings("unchecked")
 	public T delete(int index){
 		if(index<0 || index > size){
 			throw new IndexOutOfBoundsException("顺序表索引越界");
@@ -126,5 +128,10 @@ public class SequenceList<T> {
 			int len = sb.length();
 			return sb.delete(len-2, len).append("]").toString();
 		}
+	}
+	
+	public static void main(String[] args) {
+		SequenceList<Integer> list = new SequenceList<>();
+		list.SqquenceList(18);
 	}
 }

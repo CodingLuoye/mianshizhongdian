@@ -10,7 +10,7 @@ import java.lang.Thread.UncaughtExceptionHandler;
  * @author Administrator
  *
  */
-public class threadExceptionMove {
+public class ThreadExceptionMove {
 	static class MyThread extends Thread{
 		private String num = "a";
 		public MyThread(){

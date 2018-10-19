@@ -72,7 +72,7 @@ class ThreadPipeRead extends Thread{
  * @author Administrator
  *
  */
-public class pipeReaderWriter {
+public class PipeReaderWriter {
 	public static void main(String[] args) {
 		try {
 			PipeWriteData writeData = new PipeWriteData();
