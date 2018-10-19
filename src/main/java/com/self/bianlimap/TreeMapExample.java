@@ -7,7 +7,7 @@ import java.util.TreeMap;
 
 /**
  * Comparable 只有 public int compareTo(T o);然排序的排序方法
- * Comparable 可以自定义两个对象进行比较
+ * Comparator 可以自定义两个对象进行比较
  * @author Administrator
  *
  */

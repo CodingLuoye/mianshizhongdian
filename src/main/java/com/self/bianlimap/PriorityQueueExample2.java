@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 import java.util.Queue;
 
 /**
- * 自定义Comparator传入PriorityQueue堆
+ * 自定义Comparator传入PriorityQueue优先队列，保证Task能够按照一定的任务执行
  * @author Administrator
  *
  */

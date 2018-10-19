@@ -7,6 +7,11 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 
+/**
+ * json序列化
+ * @author Administrator
+ *
+ */
 public class JsonSerialize {
 	public static void main(String[] args) throws Exception {
 		Student student = new Student("张三", 18, 80.9d);

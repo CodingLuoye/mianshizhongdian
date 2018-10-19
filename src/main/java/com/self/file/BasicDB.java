@@ -222,7 +222,7 @@ public class BasicDB {
 	}
 	
 	public static void main(String[] args) {
-		Map<String,Student> students = new HashMap<>();
+		Map<String,Student> students = new HashMap<>(3);
 		students.put("1", new Student("张三", 14, 15.7f));
 		students.put("2", new Student("李四", 18, 16.2f));
 		students.put("3", new Student("王五", 20, 18.5f));

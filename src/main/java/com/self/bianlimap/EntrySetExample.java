@@ -3,6 +3,11 @@ package com.self.bianlimap;
 import java.util.EnumSet;
 import java.util.Set;
 
+/**
+ * EntrySet 简单用法
+ * @author Administrator
+ *
+ */
 public class EntrySetExample {
 
 	enum Day{

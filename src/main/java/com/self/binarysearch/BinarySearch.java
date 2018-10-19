@@ -18,9 +18,9 @@ public class BinarySearch {
 			if (dest == arr[middle]) {
 				return middle;
 			} else if (dest < arr[middle]) {
-				high = middle - 1;//减一加一肯定要有啊，因为middle不是嘛
+				high = middle - 1;//减一加一肯定要有啊，因为middle不是嘛 说明在后半部分未找到元素，把high移动到middle的左边
 			} else {
-				low = middle + 1;
+				low = middle + 1; //说明在前半部分未找到元素，所以把low移动到middle的右边
 			}
 		}
 

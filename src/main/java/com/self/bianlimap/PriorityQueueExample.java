@@ -5,7 +5,7 @@ import java.util.Collections;
 import java.util.PriorityQueue;
 import java.util.Queue;
 /**
- * 堆的本质是一个完全二叉树,堆里面的元素都是有顺序的，如果需要改变,传递一个Comparator
+ * PriorityQueue优先队列的本质是一个完全二叉树,堆里面的元素都是有顺序的，如果需要改变,传递一个Comparator
  * @author JackChen
  *
  */

@@ -30,6 +30,11 @@ class Clothes{
 	}
 	
 }
+/**
+ * 枚举EntryMap示列
+ * @author Administrator
+ *
+ */
 public class EntryMapExample {
 	public static Map<Size,Integer> countBySize(List<Clothes> clothes){
 		Map<Size,Integer> map = new EnumMap<>(Size.class);

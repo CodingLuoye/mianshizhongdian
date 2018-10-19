@@ -1,10 +1,10 @@
 package com.self.allarrange;
 
-abstract class Device{
+abstract class AbstractDevice{
 	private String name;
 	public abstract double getPrice();
-	public Device(){}
-	public Device(String name){
+	public AbstractDevice(){}
+	public AbstractDevice(String name){
 		this.name = name;
 	}
 	public String getName() {
@@ -15,21 +15,25 @@ abstract class Device{
 	}
 	
 }
-
+/**
+ * 匿名内部类
+ * @author Administrator
+ *
+ */
 public class AnonymousInner {
-	public void test(Device b){
+	public void test(AbstractDevice b){
 		System.out.println("购买一个"+b.getName()+"花了"+b.getPrice());
 	}
 	public static void main(String[] args) {
 		AnonymousInner ai = new AnonymousInner();
-		ai.test(new Device("设备a"){
+		ai.test(new AbstractDevice("设备a"){
 			@Override
 			public double getPrice() {
 				return 10;
 			}
 			
 		});
-		Device d = new Device(){
+		AbstractDevice d = new AbstractDevice(){
 			{
 				System.out.println("匿名内部类的初始化模块");
 			}

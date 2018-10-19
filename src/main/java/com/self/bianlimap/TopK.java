@@ -4,6 +4,18 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.PriorityQueue;
 
+/**
+ * 使用PriorityQueue优先队列来实现最小值，默认构造的是最小堆，如果需要修改
+ * new PriorityQueue<>(k,new new Comparator<E>() {
+			@Override
+			public int compare(E o1, E o2) {
+				return 0;
+			}
+		});修改里面的compartor即可
+ * @author Administrator
+ *
+ * @param <E>
+ */
 public class TopK<E> {
 
 	private PriorityQueue<E> p;
@@ -18,6 +30,7 @@ public class TopK<E> {
 		}
 	}
 	public void add(E e){
+		/*确保有足够的容量*/
 		if(p.size()<k){
 			p.add(e);
 			return ;
@@ -29,6 +42,7 @@ public class TopK<E> {
 			return;
 		}
 		//新元素替换原来的最小值成为TopK之一
+		//poll 方法每次从 PriorityQueue 的头部删除一个节点，也就是从小顶堆的堆顶删除一个节点
 		p.poll();
 		p.add(e);
 	}
@@ -36,6 +50,7 @@ public class TopK<E> {
 		return p.toArray(a);
 	}
 	public E getKth(){
+		//查看根节点的元素，不改变原来的队列
 		return p.peek();
 	}
 	public static void main(String[] args) {

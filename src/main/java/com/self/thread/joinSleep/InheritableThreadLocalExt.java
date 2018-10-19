@@ -1,7 +1,5 @@
 package com.self.thread.joinSleep;
 
-import java.util.Date;
-
 class Tools{
 	public static InheritableThreadLocalExt t1 = new InheritableThreadLocalExt();
 }
@@ -23,7 +21,7 @@ class ThreadTool extends Thread{
 public class InheritableThreadLocalExt extends InheritableThreadLocal {
 	@Override
 	protected Object initialValue() {
-		return new Date().getTime();
+		return System.currentTimeMillis();
 	}
 	
 	@Override

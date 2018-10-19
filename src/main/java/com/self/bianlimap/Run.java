@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
+/**
+ * 遍历hashMap的四种方式
+ * @author Administrator
+ *
+ */
 public class Run {
 
 	public static void main(String[] args) {
@@ -30,6 +35,7 @@ public class Run {
 			System.out.println(key+":"+hashMap.get(key));
 		}
 		
+		/*entrySet.iterator*/
 		Iterator<HashMap.Entry<String, String>> it= hashMap.entrySet().iterator();
 		while(it.hasNext()){
 			HashMap.Entry<String, String> entry = it.next();

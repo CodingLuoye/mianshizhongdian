@@ -12,7 +12,11 @@ class Mythread1 extends Thread{
 		myService.addNum();
 	}
 }
-
+/**
+ * AtomicLong 的使用  addAndGet
+ * @author Administrator
+ *
+ */
 public class MyService {
 	public static AtomicLong aiRef = new AtomicLong();
 	synchronized public void addNum(){
@@ -29,7 +33,7 @@ public class MyService {
 				array[i].start();
 			}
 			Thread.sleep(1000);
-			System.out.println(service.aiRef.get());
+			System.out.println(MyService.aiRef.get());
 		} catch (Exception e) {
 			// TODO: handle exception
 		}

@@ -4,6 +4,11 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.LockSupport;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * 账户
+ * @author Administrator
+ *
+ */
 public class Account {
 
 	private Lock lock = new ReentrantLock();
