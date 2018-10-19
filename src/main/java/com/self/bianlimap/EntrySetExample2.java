@@ -10,7 +10,20 @@ import com.self.bianlimap.Worker.Day;
 
 class Worker{
 	enum Day{
-		MONDAY,TUESDAY,WEdNESDAY,THRUSDAY,FRIDAY,SATURDAY,SUNDAY
+		/*星期一*/
+		MONDAY,
+		/*星期二*/
+		TUESDAY,
+		/*星期三*/
+		WEdNESDAY,
+		/*星期四*/
+		THRUSDAY,
+		/*星期五*/
+		FRIDAY,
+		/*星期六*/
+		SATURDAY,
+		/*星期日*/
+		SUNDAY
 	}
 	String name;
 	Set<Day> availableDays;
@@ -30,7 +43,21 @@ class Worker{
 	public void setAvailableDays(Set<Day> availableDays) {
 		this.availableDays = availableDays;
 	}
+	@Override
+	public int hashCode() {
+		return name.hashCode();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		return super.equals(obj);
+	}
 }
+/**
+ * 使用EntrySet example
+ * @author Administrator
+ *
+ */
 public class EntrySetExample2 {
 	
 	public static void main(String[] args) {
@@ -42,7 +69,8 @@ public class EntrySetExample2 {
 		//allOf为Day的所有值
 		Set<Day> days = EnumSet.allOf(Day.class); 
 		for (Worker w : workers) {
-			days.removeAll(w.getAvailableDays());//移除工人工作时间
+			//移除工人工作时间
+			days.removeAll(w.getAvailableDays());
 		}
 		System.out.println(days);
 		//有哪些天至少有一个人来

@@ -7,8 +7,20 @@ import java.util.Map;
 
 import com.self.bianlimap.Clothes.Size;
 class Clothes{
+	/**
+	 * {@link #SMALL} 小号
+	 * {@link #MEDIUM} 中号
+	 * {@link #LARGE} 大号
+	 * @author cl
+	 *
+	 */
 	public enum Size{
-		SMALL,MEDIUM,LARGE
+		/*小号*/
+		SMALL,
+		/*中号*/
+		MEDIUM,
+		/*大号*/
+		LARGE
 	} 
 	String id;
 	Size size;

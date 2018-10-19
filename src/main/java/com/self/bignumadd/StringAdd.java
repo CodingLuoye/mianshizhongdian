@@ -6,7 +6,11 @@ import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
 
-//TODO 还有一些细节需要抽取、修饰
+/**
+ * 两个超出范围的数相加
+ * @author Administrator
+ *
+ */
 public class StringAdd {
 
 	public void processMethod(String str1, String str2) {

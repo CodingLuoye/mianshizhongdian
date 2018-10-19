@@ -6,9 +6,10 @@ package com.self.Volatile;
  */
 public class MyThread extends Thread {
 	volatile public static int count;
-	//一定要添加static关键字
-	//synchronized 与static 锁的内容就是MyThread.class类呢如果没有synchronized
-	//输出的结果不具备原子性
+	/**一定要添加static关键字
+	*  synchronized 与static 锁的内容就是MyThread.class类呢如果没有synchronized
+	*  输出的结果不具备原子性
+	*/
 	synchronized private static void addCount(){
 		for (int i = 0; i < 100; i++) {
 			count++;

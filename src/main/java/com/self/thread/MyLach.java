@@ -54,7 +54,11 @@ public class MyLach {
 	}
 }
 
-//使用AtomicInteger实现锁MyLock
+/**
+ * 使用AtomicInteger实现锁MyLock
+ * @author Administrator
+ *
+ */
 class Mylock2{
 	private AtomicInteger status = new AtomicInteger(0);
 	public void lock(){

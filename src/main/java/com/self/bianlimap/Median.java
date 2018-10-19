@@ -8,6 +8,7 @@ import java.util.PriorityQueue;
 
 /**
  * 利用PriorityQueue求中值,将元素放到最大堆和最小堆里面，如果两个堆得数量超过2,则调整中值的位置
+ * 取中间数
  * @author JackChen
  *
  * @param <E>
