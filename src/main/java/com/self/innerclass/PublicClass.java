@@ -1,5 +1,9 @@
 package com.self.innerclass;
-
+/**
+ * 内部类
+ * @author Administrator
+ *
+ */
 public class PublicClass {
 	private String username;
 	private String password;

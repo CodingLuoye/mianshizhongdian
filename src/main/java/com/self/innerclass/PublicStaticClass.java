@@ -1,5 +1,10 @@
 package com.self.innerclass;
 
+/**
+ * 静态内部类
+ * @author Administrator
+ *
+ */
 public class PublicStaticClass {
 	static private String username;
 	static private String password;

@@ -1,5 +1,10 @@
 package com.self.lockone;
 
+/**
+ * 用户信息
+ * @author Administrator
+ *
+ */
 public class Userinfo {
 	private String username;
 	private String password;

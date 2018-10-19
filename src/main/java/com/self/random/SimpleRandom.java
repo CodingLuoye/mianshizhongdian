@@ -2,6 +2,11 @@ package com.self.random;
 
 import java.util.Random;
 
+/**
+ * 包含特殊字符的随机数
+ * @author Administrator
+ *
+ */
 public class SimpleRandom {
 
 	private static final String SPECIAL_CHARS = "!@#$%^&*_=+-/"; 

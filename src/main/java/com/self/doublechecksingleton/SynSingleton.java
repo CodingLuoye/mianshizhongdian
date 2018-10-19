@@ -7,8 +7,12 @@ public class SynSingleton {
 	private SynSingleton(){
 		
 	}
-	
-	public static synchronized SynSingleton getInstance(){ //对获取实例的方法进行同步
+	/**
+	 * 对获取实例的方法进行同步
+	 * 使用synchronized保证每次获取实例的线程只有一个,这样就不会创建多个实例
+	 * @return
+	 */
+	public static synchronized SynSingleton getInstance(){ 
 		if(instance == null){
 			instance = new SynSingleton();
 		}

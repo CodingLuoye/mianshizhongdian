@@ -11,7 +11,7 @@ public class MyService {
 				System.out.println(Thread.currentThread().getName() + " end " + System.currentTimeMillis());
 			}
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.out.println(e.getMessage());
 		}
 	}
 }

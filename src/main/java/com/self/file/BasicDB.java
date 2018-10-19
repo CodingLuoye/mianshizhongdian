@@ -46,6 +46,11 @@ class Student{
 		this.score = score;
 	}
 }
+/**
+ * 模拟基本的数据库
+ * @author Administrator
+ *
+ */
 public class BasicDB {
 
 	/**
@@ -57,22 +62,22 @@ public class BasicDB {
 	 * public void flush() throws IOException
 	 * public void close() thorws IOException
 	 */
-	
-	private static final int MAX_DATA_LNGTH = 1020; //补白字节
-	
-	private static final byte[] ZERO_BYTES = new byte[MAX_DATA_LNGTH]; //数据文件扩展名
-	
-	private static final String DATA_SUFFIX = ".data"; //数据文件扩展名
-	
-	private static final String META_SUFFIX = ".meta"; //元数据文件扩展名,包括索引和空白空间数据
-	
-	Map<String,Long> indexMap; //索引信息,键->值在.data文件中的位置
-	
-	Queue<Long> gaps;// 空白空间,值为.data文件中的位置
-	
-	RandomAccessFile db;//值数据文件
-	
-	File metaFile;//元数据文件
+	//补白字节
+	private static final int MAX_DATA_LNGTH = 1020; 
+	//数据文件扩展名
+	private static final byte[] ZERO_BYTES = new byte[MAX_DATA_LNGTH]; 
+	//数据文件扩展名
+	private static final String DATA_SUFFIX = ".data";
+	//元数据文件扩展名,包括索引和空白空间数据
+	private static final String META_SUFFIX = ".meta"; 
+	//索引信息,键->值在.data文件中的位置
+	Map<String,Long> indexMap; 
+	// 空白空间,值为.data文件中的位置
+	Queue<Long> gaps;
+	//值数据文件
+	RandomAccessFile db;
+	//元数据文件
+	File metaFile;
 	
 	public BasicDB(String path,String name) throws IOException{
 		File dataFile = new File(path + name + DATA_SUFFIX);

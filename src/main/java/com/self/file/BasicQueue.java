@@ -43,6 +43,11 @@ class Consumer{
 		}
 	}
 }
+/**
+ * 模拟消息队列
+ * @author Administrator
+ *
+ */
 public class BasicQueue {
 
 	//队列最多消息个数,实际个数还会-1
