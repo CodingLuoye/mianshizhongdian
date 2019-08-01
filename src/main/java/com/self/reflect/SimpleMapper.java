@@ -3,6 +3,10 @@ package com.self.reflect;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 
+/**
+ * 利用反射解析
+ * @author YCKJ1409
+ */
 public class SimpleMapper {
 	public static String toString(Object obj) {
 		try {
@@ -54,7 +58,8 @@ public class SimpleMapper {
 				throw new IllegalArgumentException(str);
 			}
 			Class<?> cls = Class.forName(lines[0]);
-			Object obj = cls.newInstance(); //如果对应的方法没有默认的无参构造器,newInstance会报错,切记切记
+			/**如果对应的方法没有默认的无参构造器,newInstance会报错,切记切记*/
+			Object obj = cls.newInstance();
 			if (lines.length > 1) {
 				for (int i = 1; i < lines.length; i++) {
 					String[] fv = lines[i].split("=");

@@ -17,7 +17,7 @@ public class DealThread implements Runnable {
 	}
 	@Override
 	public void run() {
-		if(username.equals("a")){
+		if("a".equals(username)){
 			synchronized (lock1) {
 				try {
 					System.out.println("username = " + username);
@@ -31,7 +31,7 @@ public class DealThread implements Runnable {
 			}
 			
 		}
-		if(username.equals("b")){
+		if("b".equals(username)){
 			synchronized (lock2) {
 				try {
 					System.out.println("username = " + username);

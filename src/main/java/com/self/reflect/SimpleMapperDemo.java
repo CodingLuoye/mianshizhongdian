@@ -1,5 +1,9 @@
 package com.self.reflect;
 
+/**
+ *
+ * @author YCKJ1409
+ */
 public class SimpleMapperDemo {
 	static class Student{
 		String name;
@@ -29,7 +33,7 @@ public class SimpleMapperDemo {
 					+ "]";
 		}
 		public Student(){
-			
+
 		}
 		public Student(String name, int age, Double score) {
 			super();

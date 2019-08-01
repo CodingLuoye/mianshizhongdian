@@ -6,6 +6,10 @@ import org.msgpack.jackson.dataformat.MessagePackFactory;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ *
+ * @author YCKJ1409
+ */
 public class MessagePack {
 	public static void main(String[] args) throws Exception {
 		Student student = new Student("张三", 18, 80.9d);

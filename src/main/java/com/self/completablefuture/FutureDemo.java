@@ -28,9 +28,9 @@ public class FutureDemo {
 		Consumer<String> taskCC = (t) ->System.out.println("consume: " + t);
 		CompletableFuture.supplyAsync(taskAA).thenApply(taskBB).thenAccept(taskCC).join();
 		
-		Supplier<String> taskAAA = () -> "hello";
+		Supplier<String> taskAAA = () -> "hello world";
 		Function<String,CompletableFuture<String>> taskBBB = (t)->CompletableFuture.supplyAsync(()->t.toUpperCase());
-		Consumer<String> taskCCC = (t) ->System.out.println("consume: " + t);
+		Consumer<String> taskCCC = (t) ->System.out.println("consume2: " + t);
 		CompletableFuture.supplyAsync(taskAAA).thenCompose(taskBBB).thenAccept(taskCCC).join();
 		
 		Supplier<String> task1 = () -> "task1";
@@ -40,14 +40,14 @@ public class FutureDemo {
 		System.out.println(ret);
 		
 		Instant now = Instant.now();
-		System.out.println(now);
+		System.out.println("Instant now ==="+now);
 		Instant now1 = Instant.ofEpochMilli(System.currentTimeMillis());
-		System.out.println(now1);
+		System.out.println("Instant ==="+now1);
 		
 		LocalDateTime ldt = LocalDateTime.now();
-		System.out.println(ldt);
+		System.out.println("LocalDateTime.now()----"+ldt);
 		LocalDateTime ldt2 = LocalDateTime.of(2018, 8,3,20,59,59);
-		System.out.println(ldt2);
+		System.out.println("LocalDateTime==="+ldt2);
 		
 		LocalDate ld = ldt.toLocalDate();
 		LocalTime lt = ldt.toLocalTime();

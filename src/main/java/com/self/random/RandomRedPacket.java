@@ -3,6 +3,7 @@ package com.self.random;
 import java.util.Random;
 /**
  *  简单的抢红包算法
+ *  优化强红包算法，保证每个人都能抢得到钱，最少一角球
  * @author Administrator
  *
  */
@@ -24,8 +25,14 @@ public class RandomRedPacket {
 			return this.leftMoney;
 		}
 		double max = this.leftMoney/this.leftNum*2d;
-		int money = (int)(rnd.nextDouble()*max);
-		this.leftMoney -= money;
+		int money=(int)(rnd.nextDouble()* max);
+		money = money<1?1:money;
+		if(this.leftMoney - money >0){
+			this.leftMoney -= money;
+		}else{
+			money = money -1;
+			this.leftMoney -= money;
+		}
 		this.leftNum --;
 		return money;
 	}

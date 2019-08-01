@@ -43,6 +43,8 @@ public enum RomanNumerals {
 			case 'M' :
 				value = RomanNumerals.M.getValue();
 				break;
+				default:
+					value = 0;
 		}
 		return value;
 	}

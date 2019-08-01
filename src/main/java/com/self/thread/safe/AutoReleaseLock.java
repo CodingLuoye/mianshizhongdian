@@ -2,11 +2,11 @@ package com.self.thread.safe;
 
 class Service{
 	synchronized public void testMethod(){
-		if(Thread.currentThread().getName().equals("a")){
+		if("a".equals(Thread.currentThread().getName())){
 			System.out.println("ThreadName=" +Thread.currentThread().getName() + " run beginTime =" + System.currentTimeMillis());
 			int i =1;
 			while(i==1){
-				if(("" + Math.random()).substring(0, 8).equals("0.123456") ){
+				if("0.123456".equals(("" + Math.random()).substring(0, 8))){
 					System.out.println("ThreadName =" +Thread.currentThread().getName() + " run exceptionTime=" + System.currentTimeMillis());
 					Integer.parseInt("a");
 				}

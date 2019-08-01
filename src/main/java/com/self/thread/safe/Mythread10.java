@@ -12,7 +12,7 @@ class MyObject{
 	@SuppressWarnings("deprecation")
 	public void setValue(String u,String p){
 		this.username = u;
-		if(Thread.currentThread().getName().equals("a")){
+		if("a".equals(Thread.currentThread().getName())){
 			System.out.println("停止a线程");
 			Thread.currentThread().suspend();
 		}

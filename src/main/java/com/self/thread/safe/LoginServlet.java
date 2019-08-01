@@ -8,7 +8,7 @@ public class LoginServlet {
 	synchronized public static void doPost(String username, String password) {
 		try {
 			usernameRef = username;
-			if (username.equals("a")) {
+			if ("a".equals(username)) {
 				Thread.sleep(5000);
 			}
 			passwordRef = password;

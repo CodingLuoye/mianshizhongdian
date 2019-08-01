@@ -17,6 +17,7 @@ public class GenericDemo {
 		public U test (List<? extends Number> numbers){
 			return null;
 		}
+
 		public static void main(String[] args) throws Exception {
 			Class<?> cls = GenericTest.class;
 			//类的参数类型

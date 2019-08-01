@@ -9,7 +9,7 @@ class SynchroinzedObject{
 	@SuppressWarnings("deprecation")
 	synchronized public void printString(){
 		System.out.println("begin");
-		if(Thread.currentThread().getName().equals("a")){
+		if("a".equals(Thread.currentThread().getName())){
 			System.out.println("a线程永远 suspend了");
 			Thread.currentThread().suspend();
 		}
