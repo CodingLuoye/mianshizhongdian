@@ -3,6 +3,10 @@ package com.self.trade;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * @author YCKJ1409
+ *
+ */
 public class Trade {
 	
 

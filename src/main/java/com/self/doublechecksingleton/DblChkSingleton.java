@@ -6,7 +6,7 @@ package com.self.doublechecksingleton;
  *
  */
 public class DblChkSingleton {
-	private static DblChkSingleton instance;
+	private volatile static DblChkSingleton instance;
 	//使用private构造器，防止其它代码创建对象
 	private DblChkSingleton() {
 	}

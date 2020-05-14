@@ -1,5 +1,9 @@
 package com.self.Volatile;
 
+/**
+ * @author YCKJ1409
+ *
+ */
 public class PrintString implements Runnable {
 	private boolean isContinuePrint = true;
 	public boolean isContinuePrint(){
